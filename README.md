@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# 👥 Integrantes do Projeto  
+### **Pedro Henrique Nascimento — 2513145**  
+### **Vitor Rezende — 2507074**  
+### **Mateus Ramos Medeiros — 2508960**  
+### **Emanuel Blummer Nieton — 2409398**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 🍕 Pizzaria Anchieta — Sistema de Pedidos Online
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto consiste em uma aplicação web desenvolvida com **React + TypeScript**, permitindo que o usuário faça login, se cadastre, escolha uma pizza, selecione tamanho, adicionais e finalize o pedido com confirmação visual.
 
-## React Compiler
+Foi pensado para ser simples, rápido e com design moderno em **tons de azul**, oferecendo uma experiência amigável tanto para estudo quanto para demonstração.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 👤 Autenticação
+- Tela de **Login**
+- Tela de **Cadastro**
+- Troca de telas de forma suave
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🍕 Montagem da Pizza
+- Seleção de **sabor**
+- Seleção de **tamanho (P, M, G)**
+- Adicionais opcionais (borda, bacon, queijo, etc.)
+- Cálculo automático do valor total
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### ✅ Finalização
+Após clicado em **Confirmar Pedido**, aparece uma tela de:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> **Pedido enviado com sucesso!**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Simples, funcional e intuitivo.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧩 Desafios Enfrentados Durante o Desenvolvimento
+
+Durante o desenvolvimento do projeto, alguns pontos exigiram atenção especial:
+
+### 🔹 Navegação por telas sem usar React Router  
+O projeto utiliza **controle manual de telas via useState**, o que exigiu cuidado para evitar conflitos e manter a navegação fluida.
+
+### 🔹 Cálculo dinâmico de preço  
+Criar um sistema que:
+- Modifica preço conforme tamanho  
+- Soma adicionais  
+- Impede erros quando nada está selecionado  
+Foi um desafio divertido.
+
+### 🔹 Estilização moderna (efeito blur)  
+O design utiliza:
+- **backdrop-filter**
+- **transparências**
+- **contraste de fontes**
+
+Isso exigiu ajustes de compatibilidade no CSS.
+
+### 🔹 Organização do estado  
+Com diversas seleções (sabor, tamanho, adicionais), precisou-se garantir que cada escolha atualizasse corretamente o estado global da tela.
+
+---
+
+## 🎨 Visual e Design
+
+- Paleta em **azul** moderna e suave  
+- Botões claros e destacados  
+- Layout centralizado e limpo  
+- Efeito “glassmorphism” no container  
+- Textos aumentados para melhor leitura  
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **React**
+- **TypeScript**
+- **Vite**
+- **CSS moderno**
+- Hooks (useState)
+
+---
+
+## 📁 Estrutura do Projeto
